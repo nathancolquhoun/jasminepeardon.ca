@@ -25,6 +25,28 @@
         .bg-ndp-blue { background-color: #2D5AF7; }
         .border-ndp { border-color: #FF9900; }
         .instagram-placeholder { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+        /* Animated Hover Underline */
+        .nav-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #2D5AF7; /* ndp-blue */
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-underline:hover::after {
+            transform: scaleX(1);
+        }
+
         /* Language Toggle Visibility */
         [data-lang="fr"] { display: none; }
         html.lang-fr [data-lang="en"] { display: none; }
@@ -40,9 +62,9 @@
             
             <div class="flex items-center space-x-4">
                 <div class="hidden md:flex space-x-6 text-xs font-black uppercase tracking-widest items-center">
-                    <a href="#about" class="hover:ndp-orange transition"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
-                    <a href="#platform" class="hover:ndp-orange transition">Platform</a>
-                    <a href="https://jasminepeardon.substack.com/" target="_blank" class="hover:ndp-orange transition">Substack</a>
+                    <a href="#about" class="hover:ndp-orange transition nav-underline"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
+                    <a href="#platform" class="hover:ndp-orange transition nav-underline">Platform</a>
+                    <a href="https://jasminepeardon.substack.com/" target="_blank" class="hover:ndp-orange transition nav-underline">Substack</a>
                     <a href="#toolkit" class="bg-ndp-orange text-white px-5 py-2 rounded-full hover:bg-orange-600 transition"><span data-lang="en">Supporter Toolkit</span><span data-lang="fr">Trousse d'outils</span></a>
                 </div>
 
@@ -56,9 +78,9 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 top-full bg-gray-50 shadow-xl border-t border-gray-200 px-6 py-4 flex flex-col space-y-4 text-sm font-black uppercase tracking-widest">
-            <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
-            <a href="#platform" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Platform</a>
-            <a href="#toolkit" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><span data-lang="en">Toolkit</span><span data-lang="fr">Trousse d'outils</span></a>
+            <a href="#about" class="w-max hover:ndp-orange transition nav-underline" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
+            <a href="#platform" class="w-max hover:ndp-orange transition nav-underline" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Platform</a>
+            <a href="#toolkit" class="w-max hover:ndp-orange transition nav-underline" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><span data-lang="en">Toolkit</span><span data-lang="fr">Trousse d'outils</span></a>
         </div>
     </nav>
 
