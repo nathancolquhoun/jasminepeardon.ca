@@ -10,7 +10,7 @@
             theme: {
                 extend: {
                     screens: {
-                        'md': '978px',
+                        'md': '540px', /* Activates desktop layout on anything larger than a phone */
                     }
                 }
             }
@@ -52,6 +52,15 @@
         html.lang-fr [data-lang="en"] { display: none; }
         html.lang-fr [data-lang="fr"] { display: block; }
         html.lang-fr span[data-lang="fr"] { display: inline; }
+
+        /* Force 979px width on tablets to enable horizontal scroll */
+        @media (min-width: 540px) and (max-width: 978px) {
+            html, body {
+                width: 990px !important;
+                min-width: 990px !important;
+                overflow-x: auto !important;
+            }
+        }
     </style>
 </head>
 <body class="min-w-[330px] bg-gray-50 text-gray-900 leading-relaxed">
@@ -109,7 +118,7 @@
                     </a>
                 </div>
             </div>
-            <div class="order-1 md:order-2">
+            <div class="order-1 md:order-2 flex">
                 <img src="hero-image.jpg" alt="Jasmine Peardon" class="w-full h-[500px] min-h-[320px] max-h-[40vh] md:max-h-[70vh] md:h-auto object-cover object-[center_20%] rounded-none md:rounded-3xl shadow-none md:shadow-2xl">
             </div>
         </div>
