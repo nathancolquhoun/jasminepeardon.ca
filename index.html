@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasmine Peardon | For NDP President 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'md': '978px',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -21,7 +32,7 @@
         html.lang-fr span[data-lang="fr"] { display: inline; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 leading-relaxed">
+<body class="min-w-[330px] bg-gray-50 text-gray-900 leading-relaxed">
 
     <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -77,7 +88,7 @@
                 </div>
             </div>
             <div class="order-1 md:order-2">
-                <img src="hero-image.jpg" alt="Jasmine Peardon" class="w-full h-[45vh] min-h-[360px] md:min-h-0 md:h-auto object-cover object-top rounded-none md:rounded-3xl shadow-none md:shadow-2xl">
+                <img src="hero-image.jpg" alt="Jasmine Peardon" class="w-full h-[500px] min-h-[320px] max-h-[40vh] md:max-h-[70vh] md:h-auto object-cover object-[center_20%] rounded-none md:rounded-3xl shadow-none md:shadow-2xl">
             </div>
         </div>
     </header>
