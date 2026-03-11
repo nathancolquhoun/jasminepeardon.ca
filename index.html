@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Peardon | For NDP President 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .ndp-orange { color: #FF9900; }
+        .bg-ndp-orange { background-color: #FF9900; }
+        .ndp-blue { color: #2D5AF7; }
+        .bg-ndp-blue { background-color: #2D5AF7; }
+        .border-ndp { border-color: #FF9900; }
+        .instagram-placeholder { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        /* Language Toggle Visibility */
+        [data-lang="fr"] { display: none; }
+        html.lang-fr [data-lang="en"] { display: none; }
+        html.lang-fr [data-lang="fr"] { display: block; }
+        html.lang-fr span[data-lang="fr"] { display: inline; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+    <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-black text-xl md:text-2xl tracking-tighter ndp-blue uppercase">Jasmine Peardon</span>
+            
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex space-x-6 text-xs font-black uppercase tracking-widest items-center">
+                    <a href="#about" class="hover:ndp-orange transition"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
+                    <a href="#platform" class="hover:ndp-orange transition">Platform</a>
+                    <a href="https://jasminepeardon.substack.com/" target="_blank" class="hover:ndp-orange transition">Substack</a>
+                    <a href="#toolkit" class="bg-ndp-orange text-white px-5 py-2 rounded-full hover:bg-orange-600 transition"><span data-lang="en">Supporter Toolkit</span><span data-lang="fr">Trousse d'outils</span></a>
+                </div>
+
+                <button onclick="toggleLanguage()" class="text-[10px] font-black uppercase tracking-widest border-2 border-ndp-blue px-2 py-1 rounded hover:bg-ndp-blue hover:text-white transition">
+                    <span data-lang="en">Français</span><span data-lang="fr">English</span>
+                </button>
+
+                <button class="md:hidden ndp-blue" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4 flex flex-col space-y-4 text-sm font-black uppercase tracking-widest">
+            <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
+            <a href="#platform" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Platform</a>
+            <a href="#toolkit" onclick="document.getElementById('mobile-menu').classList.add('hidden')"><span data-lang="en">Toolkit</span><span data-lang="fr">Trousse d'outils</span></a>
+        </div>
+    </nav>
+
+    <header class="relative bg-white pt-10 md:pt-16 pb-16 md:pb-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <div class="inline-block bg-ndp-orange text-white text-[10px] md:text-xs font-black px-3 py-1 uppercase tracking-widest mb-4">Winnipeg • 2026 NDP Convention</div>
+                <h1 class="ndp-blue font-black text-5xl md:text-8xl leading-[0.9] uppercase mb-4">Jasmine <br><span class="ndp-orange">Peardon</span></h1>
+                <p class="text-xl md:text-2xl font-bold italic text-gray-600 mb-8 lowercase">For NDP President / <span class="italic">Pour la présidence du NPD</span></p>
+                <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
+                    <span data-lang="en">NDP members should shape the direction of the party, not backroom administrators. It is time to restore internal democracy and rebuild our connection to working-class movements.</span>
+                    <span data-lang="fr">Les membres du NPD devraient façonner l'orientation du parti, et non les administrateurs de l'ombre. Il est temps de restaurer la démocratie interne et de reconstruire notre lien avec les mouvements de la classe ouvrière.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#platform" class="bg-ndp-blue text-white px-8 py-4 rounded-xl font-black uppercase tracking-tight shadow-xl hover:-translate-y-1 transition text-center text-sm">
+                        <span data-lang="en">Read the Platform</span><span data-lang="fr">Lire la plateforme</span>
+                    </a>
+                    <a href="https://jasminepeardon.substack.com/" target="_blank" class="border-2 border-gray-200 px-8 py-4 rounded-xl font-black uppercase tracking-tight hover:bg-gray-50 transition text-center text-sm">
+                        <span data-lang="en">Read the Substack</span><span data-lang="fr">Lire le Substack</span>
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <img src="hero-image.jpg" alt="Jasmine Peardon" class="w-full rounded-3xl shadow-2xl">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 md:py-24 bg-ndp-blue text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black uppercase mb-10 text-center">
+                <span data-lang="en">Restoring Internal Democracy</span><span data-lang="fr">Restaurer la démocratie interne</span>
+            </h2>
+            <div class="space-y-6 text-base md:text-lg opacity-90">
+                <p>
+                    <span data-lang="en">Jasmine Peardon is an organizer and policy researcher running for President to ensure the NDP once again becomes a political home for grassroots activists, anti-imperialists, and social movements.</span>
+                    <span data-lang="fr">Jasmine Peardon est une organisatrice et chercheuse en politiques qui se présente à la présidence pour s'assurer que le NPD redevienne un foyer politique pour les militants de la base, les anti-impérialistes et les mouvements sociaux.</span>
+                </p>
+                <p>
+                    <span data-lang="en">The party’s current executive leadership has stripped membership, obstructed leadership races, and misclassified political critique as slander. Jasmine is running to end this centralization and place trust back in the members.</span>
+                    <span data-lang="fr">La direction exécutive actuelle du parti a révoqué des adhésions, entravé les courses à la direction et qualifié les critiques politiques de calomnies. Jasmine se présente pour mettre fin à cette centralisation et redonner confiance aux membres.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-blue-800 p-6 rounded-xl">
+                    <h4 class="font-bold text-ndp-orange uppercase mb-2">
+                        <span data-lang="en">The Issues</span><span data-lang="fr">Les enjeux</span>
+                    </h4>
+                    <ul class="text-sm space-y-2 opacity-80">
+                        <li>• <span data-lang="en">Administrative "gatekeeping"</span><span data-lang="fr">« Contrôle d'accès » administratif</span></li>
+                        <li>• <span data-lang="en">Limited political debate</span><span data-lang="fr">Débat politique limité</span></li>
+                        <li>• <span data-lang="en">Exclusion of grassroots voices</span><span data-lang="fr">Exclusion des voix de la base</span></li>
+                        <li>• <span data-lang="en">Misalignment with party values</span><span data-lang="fr">Désalignement avec les valeurs du parti</span></li>
+                    </ul>
+                </div>
+                <div class="bg-blue-800 p-6 rounded-xl">
+                    <h4 class="font-bold text-ndp-orange uppercase mb-2">
+                        <span data-lang="en">The Solution</span><span data-lang="fr">La solution</span>
+                    </h4>
+                    <ul class="text-sm space-y-2 opacity-80">
+                        <li>• <span data-lang="en">Publish all Federal Council minutes</span><span data-lang="fr">Publier tous les procès-verbaux du Conseil fédéral</span></li>
+                        <li>• <span data-lang="en">Reform vetting for transparency</span><span data-lang="fr">Réformer le filtrage pour plus de transparence</span></li>
+                        <li>• <span data-lang="en">Redistribute funds to local EDAs</span><span data-lang="fr">Redistribuer les fonds aux circonscriptions (CÉL)</span></li>
+                        <li>• <span data-lang="en">Encourage open policy debate</span><span data-lang="fr">Encourager un débat politique ouvert</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="platform" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <img src="platform-cover.jpg" alt="Platform Cover" class="w-full rounded-2xl shadow-lg border border-gray-100">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-black uppercase ndp-blue mb-2">Capitalism Can’t Be Fixed</h2>
+                    <h3 class="text-xl font-bold text-ndp-orange mb-8 italic uppercase tracking-tighter">
+                        <span data-lang="en">Onwards to a Socialist Future</span><span data-lang="fr">Vers un avenir socialiste</span>
+                    </h3>
+                    <p class="mb-6 text-gray-700">
+                        <span data-lang="en">This platform argues that the crises facing society today require structural transformation rather than small reforms. It calls for economic democracy, public ownership, and an anti-imperialist foreign policy.</span>
+                        <span data-lang="fr">Cette plateforme soutient que les crises auxquelles la société est confrontée aujourd'hui nécessitent une transformation structurelle plutôt que de petites réformes. Elle appelle à la démocratie économique, à la propriété publique et à une politique étrangère anti-impérialiste.</span>
+                    </p>
+                    
+                    <ul class="space-y-3 mb-10 text-left mx-auto md:mx-0 max-w-sm md:max-w-none">
+                        <li class="flex gap-3 items-center"><strong>•</strong> <span data-lang="en">Climate justice: Shutting down the tar sands</span><span data-lang="fr">Justice climatique : fermeture des sables bitumineux</span></li>
+                        <li class="flex gap-3 items-center"><strong>•</strong> <span data-lang="en">National Housing Emergency declaration</span><span data-lang="fr">Déclaration d'urgence nationale pour le logement</span></li>
+                        <li class="flex gap-3 items-center"><strong>•</strong> <span data-lang="en">Abolition of student debt and tuition</span><span data-lang="fr">Abolition de la dette étudiante et des frais de scolarité</span></li>
+                        <li class="flex gap-3 items-center"><strong>•</strong> <span data-lang="en">Indigenous sovereignty and "Land Back"</span><span data-lang="fr">Souveraineté autochtone et « Land Back »</span></li>
+                        <li class="flex gap-3 items-center"><strong>•</strong> <span data-lang="en">Ending complicity in war and genocide</span><span data-lang="fr">Mettre fin à la complicité dans la guerre et le génocide</span></li>
+                    </ul>
+                    
+                    <a href="https://drive.google.com/file/d/1UvNWvsh9ohtmWiM3FMQNnfZeGakylAFj/view?usp=drive_link" target="_blank" class="inline-block bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-800 transition text-sm">
+                        <span data-lang="en">Download the Policy Book (PDF)</span><span data-lang="fr">Télécharger le livret politique (PDF)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-gray-50 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 text-center md:text-left">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-3xl font-black uppercase ndp-blue"><span data-lang="en">Campaign Updates</span><span data-lang="fr">Mises à jour</span></h2>
+                    <p class="text-gray-500 font-bold">Follow @jasminepeardon on Instagram</p>
+                </div>
+                <a href="https://www.instagram.com/jasminepeardon/" class="ndp-blue font-bold border-b-2 border-ndp-blue pb-1">
+                    <span data-lang="en">View Profile</span><span data-lang="fr">Voir le profil</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://www.instagram.com/jasminepeardon/" target="_blank" class="aspect-square instagram-placeholder rounded-lg flex items-center justify-center text-white font-black text-xs uppercase opacity-80 hover:opacity-100 transition text-center px-2">Post 1</a>
+                <a href="https://www.instagram.com/jasminepeardon/" target="_blank" class="aspect-square instagram-placeholder rounded-lg flex items-center justify-center text-white font-black text-xs uppercase opacity-80 hover:opacity-100 transition text-center px-2">Post 2</a>
+                <a href="https://www.instagram.com/jasminepeardon/" target="_blank" class="aspect-square instagram-placeholder rounded-lg flex items-center justify-center text-white font-black text-xs uppercase opacity-80 hover:opacity-100 transition text-center px-2">Post 3</a>
+                <a href="https://www.instagram.com/jasminepeardon/" target="_blank" class="aspect-square instagram-placeholder rounded-lg flex items-center justify-center text-white font-black text-xs uppercase opacity-80 hover:opacity-100 transition text-center px-2">Post 4</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="toolkit" class="py-16 md:py-24 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-black uppercase text-center mb-16 ndp-orange italic">
+                <span data-lang="en">Supporter Toolkit</span><span data-lang="fr">Trousse d'outils</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-black uppercase ndp-blue mb-6">Digital Action</h3>
+                    <div class="space-y-6 text-center md:text-left">
+                        <div class="border-l-0 md:border-l-4 border-gray-200 pl-0 md:pl-6">
+                            <h4 class="font-bold text-lg mb-2"><span data-lang="en">Share the Vision</span><span data-lang="fr">Partager la vision</span></h4>
+                            <p class="text-sm text-gray-600 mb-4">
+                                <span data-lang="en">Send this page and the Capitalism Can't Be Fixed platform to your local EDA emails. Ask them to distribute it to members.</span>
+                                <span data-lang="fr">Envoyez cette page et la plateforme vers les courriels de votre CÉL locale. Demandez-leur de les distribuer aux membres.</span>
+                            </p>
+                        </div>
+                        <div class="border-l-0 md:border-l-4 border-gray-200 pl-0 md:pl-6">
+                            <h4 class="font-bold text-lg mb-2">Social Media</h4>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Post campaign graphics or captions: "The NDP should belong to its members. We need democracy inside the party."</span>
+                                <span data-lang="fr">Publiez des graphiques de campagne : « Le NPD devrait appartenir à ses membres. Nous avons besoin de démocratie au sein du parti. »</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-black uppercase ndp-blue mb-6">At Convention (Winnipeg)</h3>
+                    <div class="space-y-6 text-center md:text-left">
+                        <div class="border-l-0 md:border-l-4 border-ndp-orange pl-0 md:pl-6">
+                            <h4 class="font-bold text-lg mb-2"><span data-lang="en">Caucus Organizing</span><span data-lang="fr">Organisation du caucus</span></h4>
+                            <p class="text-sm text-gray-600 mb-4">
+                                <span data-lang="en">Ask to read out a campaign statement in your caucus meeting, or invite Jasmine into the room to speak directly to delegates.</span>
+                                <span data-lang="fr">Demandez à lire une déclaration de campagne lors de votre réunion de caucus, ou invitez Jasmine à parler directement aux délégués.</span>
+                            </p>
+                        </div>
+                        <div class="border-l-0 md:border-l-4 border-ndp-orange pl-0 md:pl-6">
+                            <h4 class="font-bold text-lg mb-2"><span data-lang="en">On the Floor</span><span data-lang="fr">Sur le terrain</span></h4>
+                            <p class="text-sm text-gray-600">
+                                <span data-lang="en">Hand out flyers and pamphlets. Talk to fellow delegates about the importance of shifting power from consultants to the grassroots.</span>
+                                <span data-lang="fr">Distribuez des dépliants et des brochures. Parlez aux autres délégués de l'importance de transférer le pouvoir des consultants vers la base.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-black text-white p-8 md:p-12 rounded-3xl text-center">
+                <p class="text-xl md:text-2xl font-bold italic mb-6">
+                    <span data-lang="en">"If you are pushing for substantial change, you will face substantial push back. Be courageous and strong standing for what you believe the party needs."</span>
+                    <span data-lang="fr">« Si vous poussez pour un changement substantiel, vous ferez face à une résistance substantielle. Soyez courageux et restez fermes sur ce dont le parti a besoin selon vous. »</span>
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 font-black uppercase tracking-widest text-[10px] md:text-xs">
+                    <a href="mailto:capitalismcan’tbefixed@gmail.com" class="ndp-orange">Contact</a>
+                    <a href="https://www.instagram.com/jasminepeardon/" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@jasminepeardon" target="_blank">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-gray-100 text-center px-6">
+        <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-8">
+            <span data-lang="en">Authorized by the Jasmine Peardon Campaign for NDP President</span>
+            <span data-lang="fr">Autorisé par la campagne de Jasmine Peardon pour la présidence du NPD</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-xs font-bold text-gray-600 uppercase">
+            <a href="https://jasminepeardon.substack.com/" class="hover:text-ndp-blue">Substack</a>
+            <a href="https://www.instagram.com/jasminepeardon/" class="hover:text-ndp-blue">Instagram</a>
+            <a href="https://www.tiktok.com/@jasminepeardon" class="hover:text-ndp-blue">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61587833950281" class="hover:text-ndp-blue">Facebook</a>
+            <a href="https://www.instagram.com/p/DVn8O0WjnEw/?img_index=1" class="hover:text-ndp-blue"><span data-lang="en">Press Release</span><span data-lang="fr">Communiqué</span></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            if (html.classList.contains('lang-fr')) {
+                html.classList.remove('lang-fr');
+            } else {
+                html.classList.add('lang-fr');
+            }
+        }
+    </script>
+</body>
+</html>
