@@ -68,7 +68,7 @@
 
     <nav id="main-nav" class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
         <div id="nav-inner" class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center transition-all duration-300">
-            <a id="nav-brand" href="#" class="font-black text-xl md:text-2xl tracking-tighter ndp-blue uppercase hover:ndp-orange transition-all duration-300">Jasmine Peardon</a>
+            <a id="nav-brand" href="#" class="font-black text-xl md:text-2xl tracking-tighter ndp-blue uppercase hover:text-[#FF9900] transition-all duration-500 opacity-0 -translate-x-4 pointer-events-none">Jasmine Peardon</a>
             
             <div class="flex items-center space-x-4">
                 <div class="hidden md:flex space-x-6 text-xs font-black uppercase tracking-widest items-center">
@@ -431,21 +431,22 @@
             // ---------------------------------
             
             // If scrolled past 50px, shrink the header
-            if (window.scrollY > 50) {
+            if (window.scrollY > 150) {
                 // Reduce padding
                 navInner.classList.remove('py-4');
                 navInner.classList.add('py-2');
                 
-                // Reduce logo text size
-                navBrand.classList.remove('text-xl', 'md:text-2xl');
-                navBrand.classList.add('text-lg', 'md:text-xl');
+                // Slide and fade the logo IN
+                navBrand.classList.remove('opacity-0', '-translate-x-4', 'pointer-events-none');
+                navBrand.classList.add('opacity-100', 'translate-x-0', 'pointer-events-auto');
             } else {
-                // If at the top, restore original size
+                // Restore padding
                 navInner.classList.remove('py-2');
                 navInner.classList.add('py-4');
                 
-                navBrand.classList.remove('text-lg', 'md:text-xl');
-                navBrand.classList.add('text-xl', 'md:text-2xl');
+                // Slide and fade the logo OUT
+                navBrand.classList.add('opacity-0', '-translate-x-4', 'pointer-events-none');
+                navBrand.classList.remove('opacity-100', 'translate-x-0', 'pointer-events-auto');
             }
         });
     </script>
