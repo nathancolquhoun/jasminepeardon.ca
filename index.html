@@ -64,6 +64,7 @@
     </style>
 </head>
 <body class="min-w-[330px] bg-gray-50 text-gray-900 leading-relaxed">
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-ndp-orange shadow-[0_0_10px_rgba(255,153,0,0.8)] z-[60] w-0 transition-all duration-75 ease-out"></div>
 
     <nav id="main-nav" class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
         <div id="nav-inner" class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center transition-all duration-300">
@@ -418,10 +419,16 @@
             }
         }
 
-        // --- NEW CODE: Shrink Header on Scroll ---
         window.addEventListener('scroll', () => {
             const navInner = document.getElementById('nav-inner');
             const navBrand = document.getElementById('nav-brand');
+            
+            // --- SCROLL PROGRESS BAR LOGIC ---
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+            // ---------------------------------
             
             // If scrolled past 50px, shrink the header
             if (window.scrollY > 50) {
