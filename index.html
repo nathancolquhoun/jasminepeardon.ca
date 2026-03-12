@@ -65,9 +65,9 @@
 </head>
 <body class="min-w-[330px] bg-gray-50 text-gray-900 leading-relaxed">
 
-    <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-black text-xl md:text-2xl tracking-tighter ndp-blue uppercase hover:ndp-orange transition">Jasmine Peardon</a>
+    <nav id="main-nav" class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div id="nav-inner" class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center transition-all duration-300">
+            <a id="nav-brand" href="#" class="font-black text-xl md:text-2xl tracking-tighter ndp-blue uppercase hover:ndp-orange transition-all duration-300">Jasmine Peardon</a>
             
             <div class="flex items-center space-x-4">
                 <div class="hidden md:flex space-x-6 text-xs font-black uppercase tracking-widest items-center">
@@ -93,7 +93,7 @@
         </div>
     </nav>
 
-    <header class="relative bg-white pt-0 md:pt-16 pb-16 md:pb-24">
+    <header class="relative bg-gray-50 pt-0 md:pt-16 pb-16 md:pb-24">
         <div class="max-w-6xl mx-auto px-0 md:px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div class="order-2 md:order-1 px-6 md:px-0">
                 <div class="inline-block bg-ndp-orange text-white text-[10px] md:text-xs font-black px-3 py-1 uppercase tracking-widest mb-4">
@@ -192,7 +192,7 @@
             </div>
         </div>
     </section>
-    <section id="platform" class="py-16 md:py-24 bg-white">
+    <section id="platform" class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6 text-center md:text-left">
             <div class="flex flex-col md:flex-row gap-16 items-center">
                 <div class="md:w-1/2">
@@ -417,6 +417,30 @@
                 html.classList.add('lang-fr');
             }
         }
+
+        // --- NEW CODE: Shrink Header on Scroll ---
+        window.addEventListener('scroll', () => {
+            const navInner = document.getElementById('nav-inner');
+            const navBrand = document.getElementById('nav-brand');
+            
+            // If scrolled past 50px, shrink the header
+            if (window.scrollY > 50) {
+                // Reduce padding
+                navInner.classList.remove('py-4');
+                navInner.classList.add('py-2');
+                
+                // Reduce logo text size
+                navBrand.classList.remove('text-xl', 'md:text-2xl');
+                navBrand.classList.add('text-lg', 'md:text-xl');
+            } else {
+                // If at the top, restore original size
+                navInner.classList.remove('py-2');
+                navInner.classList.add('py-4');
+                
+                navBrand.classList.remove('text-lg', 'md:text-xl');
+                navBrand.classList.add('text-xl', 'md:text-2xl');
+            }
+        });
     </script>
 </body>
 
